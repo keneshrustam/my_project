@@ -1,0 +1,26 @@
+{
+  "mangas":[
+    {
+      "id": 1,
+      "photo": "main.jpg",
+      "link":"",
+      "name":"lol",
+      "nameEng":"",
+      "rating":"",
+      "like":0,
+      "views":0,
+      "category": "",
+      "description":"",
+      "chapters":2,
+      "data":2000,
+      "translator":"",
+      "author":"",
+      "comments": [],
+      "genres":["fentezi"],
+      "lists": {
+        "1": ["./src/img/my/IMG_0553.JPG"],
+        "2": ["./src/img/my/IMG_0557.JPG"]
+      }
+    }
+  ]
+}
