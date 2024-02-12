@@ -1,34 +1,27 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {classNames} from "../../../styleFunction/classNameFn";
 import cls from "./Novelties.module.scss"
 import img1 from "../../../img/2img/b1.png"
 import img2 from "../../../img/2img/b2.png"
 import img3 from "../../../img/2img/img3.png"
-import main from "../../../img/my/main.jpg"
 import { AppContext } from "../../../server/Provider";
 
 const Novelties = () => {
-    // const arr = [{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 },{name:"Моя эволюция в демона",category:"манхва",rating:9.2 }]
-    const { manga, getData } = useContext(AppContext)
-    const [mangaDb, setMangaDb] = useState([])
+    const { oneManga, manga, getData } = useContext(AppContext)
 
     useEffect(() => {
         getData?.()
     },[])
 
-    useEffect(() => {
-        // @ts-ignore
-        setMangaDb(manga)
-    },[manga])
-
-    console.log(mangaDb)
     const arr2 = [{name:"Моё перерождение в древо: Начало...",description:"Лучший тайтл 2023 в жанре перерождение",img:img1},{name:"Меч разящего грома — новый сезон",description:"Читай тайтл только у нас на сайте в качественном переводе!",img:img2},{name:"Помогите нам улучшить сайт!",description:"Предложи новый функционал, чтобы улучшить сайт.",img:img3}]
+
     return (
         <div className={classNames(cls.MainDiv)}>
             <h4 className={classNames(cls.H4)}>Горячие новинки</h4>
             <div className={classNames(cls.wrapperScroll)}>
                 <div className={classNames(cls.wrapperForNovelt)}>
                     {manga.map((manga) =>
+                        <a href={`manga/${manga.id}`}>
                         <div className={classNames(cls.element)}>
                             <div className={classNames(cls.wrapperForImg)}>
                                 <img
@@ -41,6 +34,7 @@ const Novelties = () => {
                                 className={classNames(cls.z)}>★</span></p>
                             <h5>{manga.name}</h5>
                         </div>
+                        </a>
                     )}
                 </div>
             </div>

@@ -1,7 +1,7 @@
 
  import { RouteProps } from "react-router-dom"
  import React from "react";
- import Main from "../../pages/main/Main";
+ import {Main, CardManga, MangaContent} from "../../pages";
 
 
 
@@ -9,7 +9,9 @@
  enum AppRoutes {
      MAIN = "main",
      NOT_FOUND = "not_found",
-     CONTACTS = "contacts"
+     CONTACTS = "contacts",
+     CARDMANGA = "cardmanga",
+     MANGACONTENT = "mangaContent"
  }
 
  export type AppRouteProps = RouteProps &  {}
@@ -17,6 +19,9 @@
  export const RoutePaths: Record<AppRoutes, string> = {
      [AppRoutes.MAIN]: "/",
      [AppRoutes.CONTACTS]: "/contacts",
+     [AppRoutes.CARDMANGA]:"/manga/:itemId",
+     [AppRoutes.MANGACONTENT]:"/manga/:itemId/:chapters",
+
 
 
      //last
@@ -36,6 +41,14 @@
      [AppRoutes.CONTACTS]: {
          path: RoutePaths.contacts,
          element: <div></div>
+     },
+     [AppRoutes.CARDMANGA]: { // Динамический путь с параметром маршрута
+         path: RoutePaths.cardmanga,
+         element: <CardManga/>
+     },
+     [AppRoutes.MANGACONTENT]: { // Динамический путь с параметром маршрута
+         path: RoutePaths.mangaContent,
+         element: <MangaContent/>
      }
  };
 

@@ -9,6 +9,10 @@ const getRequest = "getRequest";
 const getSuccess = "getSuccess";
 const getFailure = "getFailure";
 
+const getRequestOneManga = "getRequestOneManga";
+const getSuccessOneManga = "getSuccessOneManga";
+const getFailureOneManga = "getFailureOneManga";
+
 const addRequest = "addRequest";
 const addSuccess = "addSuccess";
 const addFailure = "addFailure";
@@ -31,6 +35,26 @@ export default (state : TInitialState & any, action : TAction) => {
             };
         }
         case getFailure : {
+            return {
+                ...state,
+                error : action.payload,
+                loading : false
+            };
+        }
+        case getRequestOneManga: {
+            return {
+                ...state,
+                loading: true
+            };
+        }
+        case getSuccessOneManga: {
+            return {
+                ...state,
+                loading: false,
+                oneManga: action.payload
+            };
+        }
+        case getFailureOneManga : {
             return {
                 ...state,
                 error : action.payload,
