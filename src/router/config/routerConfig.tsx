@@ -1,9 +1,6 @@
-
  import { RouteProps } from "react-router-dom"
  import React from "react";
  import {Main, CardManga, MangaContent} from "../../pages";
-
-
 
 
  enum AppRoutes {

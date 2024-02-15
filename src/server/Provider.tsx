@@ -7,6 +7,7 @@ import reducer from "./reducer";
 const API_URL = "http://localhost:5005";
 
 export type TManga = {
+    manga4:boolean;
     id:number;
     photo: string;
     link: string;
@@ -33,13 +34,11 @@ export type TAction = {
 
 export type TContextProps = {
     getData?: () => Promise<void>;
-    getOneManga?: (id :string) => Promise<void>
     addData?: (name: string,lastName: string, mobileNum: number, clearForm :() => void) => Promise<void>
 }
 
 export type TInitialState = {
     manga: TManga[];
-    oneManga: null | TManga;
     loading: boolean;
     error: any;
 }
@@ -53,20 +52,9 @@ const Provider = ({ children }: React.PropsWithChildren) => {
         try {
             dispatch({ type: "getRequest" });
             const { data } = await axios.get(`${API_URL}/mangas`);
-            // const { data : uniqueManga } = await axios.get(`${API_URL}/uniqueManga`);
             dispatch({ type: "getSuccess", payload: data});
         } catch (error) {
             dispatch({ type: "getFailure", payload: error });
-        }
-    }, []);
-
-    const getOneManga = useCallback(async (id :string) => {
-        try {
-            dispatch({ type: "getRequestOneManga" });
-            const { data } = await axios.get(`${API_URL}/mangas/${id}`);
-            dispatch({ type: "getSuccessOneManga", payload: data });
-        } catch (error) {
-            dispatch({ type: "getFailureOneManga", payload: error });
         }
     }, []);
 
@@ -87,16 +75,15 @@ const Provider = ({ children }: React.PropsWithChildren) => {
     }, []);
 
     const value: TInitialState & TContextProps = {
-        oneManga: state.oneManga,
         manga: state.manga,
         loading: state.loading,
         error: state.error,
         addData,
         getData,
-        getOneManga
     };
 
     return (
+        // @ts-ignore
         <AppContext.Provider value={value}>
             {children}
         </AppContext.Provider>

@@ -1,33 +1,47 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Button from "../../components/button";
-import {useParams} from "react-router-dom";
-import {AppContext} from "../../server/Provider";
+import { useParams } from "react-router-dom";
+import { AppContext, TManga } from "../../server/Provider"; // Подставьте соответствующий тип MangaItem
+import { classNames } from "../../styleFunction/classNameFn";
+import cls from "./CardManga.module.scss";
 
-const CardManga = () => {
-    const { oneManga ,getOneManga } = useContext(AppContext)
-    const { itemId } : Readonly<Partial<{ itemId: string; }>>  = useParams<{ itemId: string }>();
-
+const CardManga: React.FC = () => {
+    const { manga } = useContext(AppContext);
+    const { itemId } = useParams<{ itemId: string }>();
+    const [mangaContent, setMangaContent] = useState<TManga | null>(null);
+    const filteredManga = manga.find(item => item.id.toString() === itemId);
     useEffect(() => {
-        if (typeof itemId === "string") {
-            getOneManga?.(itemId)
+        if (filteredManga) {
+            setMangaContent(filteredManga);
         }
-    }, []);
+    }, [filteredManga]);
+
+    console.log(filteredManga)
 
     return (
         <div>
-            <div>
-            {/*  картинка и кнопка чтение и добавление в закладки  */}
+            {mangaContent && (
                 <div>
-                    <img src={`/static/media/${oneManga?.photo}`} alt={'Технические шоколадки'}/>
+                    {/* Картинка и кнопка чтения и добавления в закладки */}
+                    <div>
+                        {/* Для скелетона, когда картинка грузится долго */}
+                        {mangaContent.photo ? (
+                            <img
+                                className={classNames(cls.photo)}
+                                src={mangaContent.photo}
+                                alt={'Технические шоколадки'}
+                            />
+                        ) : (
+                            <div className={classNames(cls.skyliton)}></div>
+                        )}
+                    </div>
+                    <div className={classNames(cls.wrapperForButton)}>
+                        <a href={``} className={classNames(cls.buttonA)}>перейти</a>
+                        <Button className={classNames(cls.buttonZakladka)} />
+                    </div>
                 </div>
-                <div>
-                    <a href={``}/>
-                    <Button />
-                </div>
-            </div>
-            <div>
-
-            </div>
+            )}
+            <div>{/* Дополнительный контент */}</div>
         </div>
     );
 };
