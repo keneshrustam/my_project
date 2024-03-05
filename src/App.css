@@ -8,3 +8,7 @@
     padding: 10px 6px 10px 6px;
     justify-content: flex-start;
 }
+
+a {
+    text-decoration: none;
+}

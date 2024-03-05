@@ -1,0 +1,123 @@
+.main {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 14vw;
+}
+.main .boxHButton {
+  padding: 0 0 10px 0;
+}
+.main .boxHButton .Dropdown {
+  position: absolute;
+  width: 210px;
+  background-color: #222223;
+  border-radius: 11px;
+  padding: 16px 0 16px 0;
+}
+.main .boxHButton .Dropdown .boxDropdown {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+.main .boxHButton .Dropdown .boxDropdown button {
+  width: 100%;
+  height: 40px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.main .boxHButton .Dropdown .boxDropdown button:hover {
+  background-color: #696868;
+}
+
+.boxListFilter {
+  width: 80%;
+  display: flex;
+}
+.boxListFilter .catalogList {
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.boxListFilter .selectorsInp {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 20px;
+}
+.boxListFilter .selectorsInp .boxInp {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.boxListFilter .selectorsInp .boxInp .wrapperInpMini {
+  display: flex;
+  gap: 10px;
+}
+.boxListFilter .selectorsInp .boxInp .wrapperInpMini .inputMini {
+  padding: 10px 8px 10px 8px;
+  display: inline-flex;
+  border: none;
+  border-radius: 15px;
+  width: 90px;
+  background-color: #1d1d1e;
+}
+.boxListFilter .selectorsInp .boxInp .input {
+  border: none;
+  outline: none;
+  font-weight: 700;
+  background-color: #1d1d1e;
+  width: 200px;
+  border-radius: 16px;
+  height: 30px;
+  padding: 6px 10px 7px 10px;
+  min-width: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.boxListFilter .selectorsInp .boxInp .input ::placeholder {
+  color: #787878;
+}
+.boxListFilter .selectorsInp .boxInp .input .firstInputs {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  cursor: text;
+  box-sizing: border-box;
+  font-size: 1rem;
+  position: absolute;
+  padding: 12px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  opacity: 0.7;
+  border-radius: 16px;
+  background-color: #222223;
+  border: 5px solid #222223;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.07);
+}
+
+.button {
+  position: relative;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 4px 10px 4px;
+  cursor: pointer;
+  background-color: #1d1d1e;
+  color: white;
+}
+.button:hover {
+  background-color: #2e2e2e;
+}
+
+/*# sourceMappingURL=Catalog.module.css.map */

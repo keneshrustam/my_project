@@ -1,0 +1,33 @@
+.element {
+  flex: 0 0 auto;
+  width: 128px;
+  height: 280px;
+  font-size: 0.9rem;
+  overflow: hidden;
+}
+
+.wrapperForImg {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  background-size: cover;
+  width: 128px;
+  height: 200px;
+}
+
+.rating {
+  font-size: 12px;
+}
+
+.z {
+  font-size: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/*# sourceMappingURL=MangaCard.module.css.map */
