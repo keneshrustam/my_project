@@ -94,10 +94,10 @@ const MangaContent = () => {
                 const { data } = await axios.get(`http://localhost:5005/mangas/${mangaId}`);
                 localStorage.setItem(`${LocalStorageUserLastChapter}${data?.name}`, `${chapter}`)
                 setChaptersLists(data.chaptersLists);
-                setLoading(true);
+                setLoading(false);
             } catch (error) {
                 console.log(error);
-                setLoading(false);
+                setLoading(true);
                 setChaptersLists(data);
             }
         };
