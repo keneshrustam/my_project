@@ -1,0 +1,31 @@
+.ProductCard {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: var(--dark-bg);
+  padding: 20px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  &:hover{
+    cursor: pointer;
+  }
+
+}
+
+.description {
+  font: var(--font-s);
+}
+
+.oldPrice {
+  font-size: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+}

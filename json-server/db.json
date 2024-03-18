@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "username": "aidar",
+      "password": "123",
+      "productFavorites": [
+        3,
+        4,
+        7,
+        5,
+        1,
+        2
+      ],
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "title": "iPhone 13 Pro",
+      "description": "The iPhone 13 Pro features a stunning Super Retina XDR display, A15 Bionic chip, Pro camera system, and up to 1TB of storage.",
+      "id": 1,
+      "price": 999.99,
+      "oldPrice": 1099.99,
+      "category": "Smartphones",
+      "images": [
+        "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.slideshow-xlarge_2x.jpg"
+      ]
+    },
+    {
+      "title": "iPhone 13",
+      "description": "The iPhone 13 offers a beautiful Super Retina XDR display, A15 Bionic chip, advanced dual-camera system, and all-day battery life.",
+      "id": 2,
+      "price": 799.99,
+      "oldPrice": 899.99,
+      "category": "Smartphones",
+      "images": [
+        "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.slideshow-xlarge_2x.jpg"
+      ]
+    },
+    {
+      "title": "iPhone 12 Pro Max",
+      "description": "The iPhone 12 Pro Max features a large Super Retina XDR display, A14 Bionic chip, Pro camera system with LiDAR scanner, and Ceramic Shield front cover.",
+      "id": 3,
+      "price": 1099.99,
+      "oldPrice": 1199.99,
+      "category": "Smartphones",
+      "images": [
+        "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.slideshow-xlarge_2x.jpg"
+      ]
+    },
+    {
+      "title": "iPhone 12 mini",
+      "description": "The iPhone 12 mini packs big features in a compact design with a Super Retina XDR display, A14 Bionic chip, dual-camera system, and 5G capability.",
+      "id": 4,
+      "price": 699.99,
+      "oldPrice": 749.99,
+      "category": "Smartphones",
+      "images": [
+        "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.slideshow-xlarge_2x.jpg"
+      ]
+    },
+    {
+      "title": "iPhone SE (2nd generation)",
+      "description": "The iPhone SE (2nd generation) combines the power of the A13 Bionic chip with the beloved design of the iPhone 8, featuring a Retina HD display and Touch ID.",
+      "id": 5,
+      "price": 399.99,
+      "oldPrice": 449.99,
+      "category": "Smartphones",
+      "images": [
+        "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.slideshow-xlarge_2x.jpg"
+      ]
+    },
+    {
+      "title": "iPhone 11 Pro",
+      "description": "The iPhone 11 Pro delivers advanced performance with the A13 Bionic chip, Pro camera system, Super Retina XDR display, and all-day battery life.",
+      "id": 6,
+      "price": 899.99,
+      "oldPrice": 999.99,
+      "category": "Smartphones",
+      "images": [
+        "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.slideshow-xlarge_2x.jpg"
+      ]
+    },
+    {
+      "title": "iPhone XR",
+      "description": "The iPhone XR features a Liquid Retina display, A12 Bionic chip, advanced Face ID, and a single-camera system with Portrait mode and Depth Control.",
+      "id": 7,
+      "price": 599.99,
+      "oldPrice": 649.99,
+      "category": "Smartphones",
+      "images": [
+        "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-deep-purple-220907-geo_inline.jpg.slideshow-xlarge_2x.jpg"
+      ]
+    }
+  ]
+}

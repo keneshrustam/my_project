@@ -1,0 +1,26 @@
+.ProductList{
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+
+      li {
+        max-width: 20%;
+        height: 300px;
+
+        > a:hover {
+          transform: scale(1.05);
+        }
+      }
+
+    }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

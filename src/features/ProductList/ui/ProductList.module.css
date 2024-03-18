@@ -1,0 +1,16 @@
+.ProductList ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+.ProductList ul li {
+  max-width: 20%;
+  height: 300px;
+}
+.ProductList ul li :hover {
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=ProductList.module.css.map */

@@ -1,0 +1,28 @@
+.ProductCard {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #3d6e7b;
+  padding: 20px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.description {
+  font: var(--font-s);
+}
+
+.oldPrice {
+  font-size: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=ProductCard.module.css.map */
