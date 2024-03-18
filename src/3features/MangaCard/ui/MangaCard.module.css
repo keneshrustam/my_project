@@ -12,9 +12,9 @@
 }
 
 .img {
-  background-size: cover;
   width: 128px;
   height: 200px;
+  object-fit: cover;
 }
 
 .rating {

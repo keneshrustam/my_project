@@ -10,8 +10,10 @@ import {API_URL} from "../../../5shered/api/api";
 export type TContextProps = {
     getData?: () => Promise<void>;
     addComment?: (newComment: any,id: string | number, clearForm :() => void) => Promise<void>
-    regUser?: (email: string, password: string) => Promise<void>;
-    loginUser?: (email: string, password: string) => Promise<void>;
+    regUser?: (email: string, password: string, Navigate: () => void) => Promise<void>;
+    loginUser?: (email: string, password: string, Navigate: () => void, toggleReg: () => void) => Promise<void | string | undefined>;
+    fastLoginUser?: (email: string, password: string) => Promise<void | string | undefined>;
+    checkEmail?: (email: string) => Promise<void | string | undefined>;
 }
 
 export type TInitialState = {
@@ -21,15 +23,20 @@ export type TInitialState = {
     user: {
         email: string;
         password: string;
+        img: string;
+        favoriteMangas: number[]
     } | null;
 
 }
 
-export type TDispatch = {
-    AppDispatch: ({
-        type: string
-        payload?: object
-    })
+type user = {
+    email: string,
+    password:  string,
+    id: number
+}
+
+interface users {
+    users: user[]
 }
 
 export const AppContext = createContext<TInitialState & TContextProps>(initialState);
@@ -52,6 +59,7 @@ const Provider = ({ children }: React.PropsWithChildren) => {
         try {
             dispatch({ type: "addRequest" });
             const { data: mangaItem } = await axios.get(`${API_URL}/mangas/${id}`);
+            console.log(mangaItem)
             if (mangaItem && mangaItem.comments) {
                 mangaItem.comments.push(newComment);
                 await axios.put(`${API_URL}/mangas/${id}`, mangaItem);
@@ -65,14 +73,65 @@ const Provider = ({ children }: React.PropsWithChildren) => {
         }
     }, []);
 
-    const regUser = useCallback(async (email: string, password: string) => {
+    const checkEmail = useCallback(async (email: string) => {
         try {
-            const { data } = await axios.post(`${API_URL}/usres`, {
+            const { data: users } =  await axios.get(`${API_URL}/users`)
+            return users.find((user : user) => user.email === email)
+        } catch (error) {
+            console.log(error)
+        }
+    },[])
+
+    const regUser = useCallback(async (email: string, password: string, Navigate: () => void) => {
+        try {
+            const newUser = {
                 email: email,
-                password: password
-            });
-            console.log(data)
+                password: password,
+                favoriteMangas: []
+            }
+            const { data } = await axios.post(`${API_URL}/users`, newUser);
             dispatch({ type: "registerUser", payload: data});
+            localStorage.setItem("user", JSON.stringify(newUser))
+            Navigate()
+        } catch (error) {
+            dispatch({ type: "getFailure", payload: error });
+        }
+    }, []);
+
+
+    const loginUser = useCallback(async (email: string, password: string, Navigate: () => void, toggleReg: () => void) => {
+        try {
+            const { data: users } = await axios.get(`${API_URL}/users`);
+
+            const user: users = users.find((user : user) => user.email === email && user.password === password)
+
+            if (user) {
+                toggleReg();
+                Navigate();
+                localStorage.setItem("user", JSON.stringify({email: email,password:password}))
+            } else {
+                return "Проверьте Email на наличие ошибок или пароль";
+            }
+
+            dispatch({ type: "registerUser", payload: user });
+        } catch (error) {
+            dispatch({ type: "getFailure", payload: error });
+        }
+    }, []);
+
+    const fastLoginUser = useCallback(async (email: string, password: string) => {
+        try {
+            const { data: users } = await axios.get(`${API_URL}/users`);
+
+            const user: users = users.find((user : user) => user.email === email && user.password === password)
+
+            if (user) {
+                console.log("OK USER")
+            } else {
+                return "не балуйся с локалСтореж";
+            }
+
+            dispatch({ type: "registerUser", payload: user });
         } catch (error) {
             dispatch({ type: "getFailure", payload: error });
         }
@@ -87,11 +146,13 @@ const Provider = ({ children }: React.PropsWithChildren) => {
         addComment,
         getData,
         regUser,
+        loginUser,
+        fastLoginUser,
+        checkEmail,
         user: state.user
     };
 
     return (
-        // @ts-ignore
         <AppContext.Provider value={value}>
             {children}
         </AppContext.Provider>

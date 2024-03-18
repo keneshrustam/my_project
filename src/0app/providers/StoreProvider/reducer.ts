@@ -17,10 +17,13 @@ const addRequest = "addRequest";
 const addSuccess = "addSuccess";
 const addFailure = "addFailure";
 
+const addCommentRequest = "addCommentRequest";
+const addCommentSuccess = "addCommentSuccess";
+const addCommentFailure = "addCommentFailure";
+
 const registerUser = "registerUser"
 
 export default (state : TInitialState & any, action : TAction) => {
-    console.log(state)
     switch (action.type) {
         case getRequest: {
             return {

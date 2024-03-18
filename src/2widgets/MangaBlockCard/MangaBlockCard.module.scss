@@ -20,7 +20,7 @@
     .imgWrapper {
       width: 128px;
       height: 200px;
-
+      object-fit: cover;
     }
 
     .boxForDescription {
@@ -30,15 +30,24 @@
       padding: 0 12px 35px 20px;
 
 
-
+      .lvr {
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 5px;
+        flex-direction: row;
+        margin-top: 5px;
 
         .WrapperForIcons {
-          width: 40px;
+          width: 60px;
 
           .Icons {
             font-size: 14px;
           }
         }
+      }
+
+
       }
 
       .Name {
@@ -67,11 +76,4 @@
 
 
 
- .lvr {
-   max-width: 100%;
-   display: flex;
-   justify-content: flex-start;
-   gap: 5px;
-   flex-direction: row;
-   margin-top: 5px
- }
+

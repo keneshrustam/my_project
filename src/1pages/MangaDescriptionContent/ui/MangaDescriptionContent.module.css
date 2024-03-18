@@ -1,0 +1,431 @@
+.box {
+  max-width: 1300px;
+  height: auto;
+  padding: 20px 50px 0 50px;
+  display: flex;
+  justify-content: center;
+  font-family: "Exo 2", sans-serif;
+}
+@media (max-width: 600px) {
+  .box {
+    display: block;
+    padding: 0;
+  }
+}
+.box .boxForOtherNames {
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .box .boxForOtherNames {
+    width: 90vw;
+    text-align: center;
+    font-family: "Exo 2", sans-serif;
+    color: #868686;
+    font-weight: 800;
+  }
+}
+.box .mangaContainer {
+  max-width: 1100px;
+}
+.box .mangaContainer .boxImg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .mangaContainer .boxImg .photo {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+@media (max-width: 600px) {
+  .box .mangaContainer .boxImg .photo {
+    margin-top: 50px;
+    width: 70vw;
+    border-radius: 15px;
+  }
+}
+.box .boxForButton {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 600px) {
+  .box .boxForButton {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    gap: 40px;
+  }
+}
+.box .boxForButton .buttonA {
+  background-color: #1976d2;
+  border-radius: 8px;
+  text-decoration: none;
+  width: 250px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 15px;
+}
+@media (max-width: 600px) {
+  .box .boxForButton .buttonA {
+    border-radius: 24px;
+    height: 50px;
+  }
+}
+.box .boxForButton .buttonZakladka {
+  width: 250px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+}
+@media (max-width: 600px) {
+  .box .boxForButton .buttonZakladka {
+    width: 60px;
+    border-radius: 24px;
+    height: 50px;
+  }
+}
+.box .boxForButton .buttonNoneChapter {
+  width: 250px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background-color: #374a5c;
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  cursor: no-drop;
+}
+
+.skyliton {
+  margin-bottom: 5px;
+  background-color: #2b2b2b;
+  width: 250px;
+  height: 450px;
+  border-radius: 8px;
+}
+
+.boxForDescriptionOfContent {
+  margin: -1vw 50px 0 50px;
+  padding-top: 20px;
+  height: auto;
+  overflow-y: scroll;
+}
+@media (max-width: 600px) {
+  .boxForDescriptionOfContent {
+    overflow: visible;
+    margin: 0 20px 0 20px;
+    width: 100vw;
+  }
+}
+.boxForDescriptionOfContent .boxForName {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .boxForDescriptionOfContent .boxForName .NameTitle {
+    font-size: calc(24px + 10.2 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  .boxForDescriptionOfContent .boxForName .NameTitle {
+    font-size: calc(24px + 6 * 100vw/1280);
+  }
+}
+@media (max-width: 600px) {
+  .boxForDescriptionOfContent .boxForName .NameTitle {
+    text-align: center;
+    width: 90vw;
+    font-weight: 500;
+    font-family: "Exo 2", sans-serif;
+  }
+}
+.boxForDescriptionOfContent .boxForName .categoryAndData {
+  display: none;
+}
+@media (max-width: 600px) {
+  .boxForDescriptionOfContent .boxForName .categoryAndData {
+    font-family: "Exo 2", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #868686;
+    display: block;
+    width: 90vw;
+    text-align: center;
+  }
+}
+.boxForDescriptionOfContent .boxForName .status {
+  color: #7f7f7f;
+  font-weight: 600;
+  margin-left: 20px;
+}
+@media (max-width: 767px) {
+  .boxForDescriptionOfContent .boxForName .status {
+    font-size: calc(10px + 10.2 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  .boxForDescriptionOfContent .boxForName .status {
+    font-size: calc(10px + 6 * 100vw/1280);
+  }
+}
+@media (max-width: 600px) {
+  .boxForDescriptionOfContent .boxForName .status {
+    display: none;
+  }
+}
+.boxForDescriptionOfContent .boxForRating {
+  width: 60vw;
+  margin-top: 10px;
+  padding-bottom: 15px;
+  border-bottom: 0.5px solid grey;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .boxForDescriptionOfContent .boxForRating {
+    width: 100vw;
+    gap: 0;
+    justify-content: center;
+  }
+}
+.boxForDescriptionOfContent .boxForRating .elementRating {
+  margin-right: 40px;
+  text-align: center;
+  font-size: 17px;
+}
+.boxForDescriptionOfContent .boxForRating .star {
+  color: #ff9800;
+}
+@media (max-width: 767px) {
+  .boxForDescriptionOfContent .boxForRating .star {
+    font-size: calc(15px + 8.5 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  .boxForDescriptionOfContent .boxForRating .star {
+    font-size: calc(15px + 5 * 100vw/1280);
+  }
+}
+@media (max-width: 767px) {
+  .boxForDescriptionOfContent .boxForRating .heart {
+    font-size: calc(13px + 5.1 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  .boxForDescriptionOfContent .boxForRating .heart {
+    font-size: calc(13px + 3 * 100vw/1280);
+  }
+}
+@media (max-width: 767px) {
+  .boxForDescriptionOfContent .boxForRating .eyes {
+    font-size: calc(15px + 8.5 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  .boxForDescriptionOfContent .boxForRating .eyes {
+    font-size: calc(15px + 5 * 100vw/1280);
+  }
+}
+.boxForDescriptionOfContent .boxForRating .bsBook {
+  color: white;
+}
+@media (max-width: 767px) {
+  .boxForDescriptionOfContent .boxForRating .bsBook {
+    font-size: calc(14px + 5.1 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  .boxForDescriptionOfContent .boxForRating .bsBook {
+    font-size: calc(14px + 3 * 100vw/1280);
+  }
+}
+.boxForDescriptionOfContent .rating {
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .boxForDescriptionOfContent .rating {
+    font-size: calc(15px + 8.5 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  .boxForDescriptionOfContent .rating {
+    font-size: calc(15px + 5 * 100vw/1280);
+  }
+}
+.boxForDescriptionOfContent .data {
+  display: block;
+  margin-right: 10px;
+}
+@media (max-width: 600px) {
+  .boxForDescriptionOfContent .data {
+    display: none;
+  }
+}
+.boxForDescriptionOfContent .category {
+  display: block;
+  margin-right: 10px;
+}
+@media (max-width: 600px) {
+  .boxForDescriptionOfContent .category {
+    display: none;
+  }
+}
+
+.description .boxforbtn {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 600px) {
+  .description .boxforbtn {
+    width: 90vw;
+    justify-content: center;
+  }
+}
+.description .ButtonDescription {
+  width: 85px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 12px 0 12px 0;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 12px;
+}
+@media (max-width: 767px) {
+  .description .ButtonDescription {
+    margin: calc(8px + 3.4 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  .description .ButtonDescription {
+    margin: calc(8px + 2 * 100vw/1280);
+  }
+}
+.description .ButtonDescription:hover {
+  font-size: 11px;
+  background-color: #1b1b1b;
+}
+.description .ButtonDescription:hover:active {
+  color: #1976d2;
+}
+.description .ButtonDescription:hover::before {
+  width: 80%;
+}
+.description .ButtonDescription::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #1976d2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  transition: 0.3s ease;
+}
+
+.p {
+  width: 60vw;
+  font-weight: 600;
+  line-height: 2;
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  .p {
+    width: 90vw;
+  }
+}
+.p .descriptionManga {
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+}
+.p .boxComments {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@media (max-width: 767px) {
+  .p .boxComments h2 {
+    font-size: calc(2px + 34 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  .p .boxComments h2 {
+    font-size: calc(2px + 20 * 100vw/1280);
+  }
+}
+.p .boxComments .Comments {
+  margin-top: 30px;
+  display: grid;
+  gap: 40px;
+}
+.p .boxComments .Comments .boxComment {
+  height: auto;
+  padding: 5px 20px 0 20px;
+  background-color: #171717;
+  border-radius: 16px;
+}
+.p .boxComments .Comments .boxComment .boxLike {
+  display: flex;
+  gap: 5px;
+}
+
+.ul {
+  width: 50vw;
+}
+.ul .Li {
+  text-align: center;
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  background-color: #181818;
+  border-radius: 8px;
+  height: 6vh;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+  .ul .Li {
+    font-size: calc(10px + 10.2 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  .ul .Li {
+    font-size: calc(10px + 6 * 100vw/1280);
+  }
+}
+
+.boxForGenres {
+  width: 40vw;
+  display: flex;
+  margin-top: 1vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+@media (max-width: 600px) {
+  .boxForGenres {
+    width: 90vw;
+  }
+}
+
+.gener {
+  background-color: #212123;
+  border-radius: 15px;
+  padding: 0 9px 0 9px;
+}
+
+/*# sourceMappingURL=MangaDescriptionContent.module.css.map */

@@ -1,11 +1,11 @@
 import Main from "./MainPage/ui/Main";
-import CardManga from "./MangaDescrptionContent/ui/CardManga";
+import MangaDescriptionContent from "./MangaDescriptionContent/ui/MangaDescriptionContent";
 import MangaContent from "./MangaChaptersContent/MangaContent";
 import MangaTops from "./MangaTops/MangaTops";
 
 export {
     MangaContent,
-    CardManga,
+    MangaDescriptionContent,
     MangaTops,
     Main
 }

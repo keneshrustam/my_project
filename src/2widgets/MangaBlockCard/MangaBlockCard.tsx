@@ -4,7 +4,7 @@ import { IoEye } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import {classNames} from "../../5shered/styleFunction/classNameFn";
-import {Link} from "react-router-dom";
+import {numberConverter} from "../../5shered";
 
 export interface IMangaBlockCardProps {
     photo?: string;
@@ -34,15 +34,15 @@ const MangaBlockCard: React.FC<IMangaBlockCardProps> = ({
                             <div className={classNames(cls.lvr)}>
                                 <div className={classNames(cls.WrapperForIcons)}>
                                     <FaStar className={classNames(cls.Icons)}/>
-                                    {rating}
+                                    {rating  &&  numberConverter?.(rating)}
                                 </div>
                                 <div className={classNames(cls.WrapperForIcons)}>
                                     <FaHeart className={classNames(cls.Icons)}/>
-                                    {like}
+                                    {like  &&  numberConverter?.(like)}
                                 </div>
                                 <div className={classNames(cls.WrapperForIcons)}>
                                     <IoEye className={classNames(cls.Icons)}/>
-                                    {views}
+                                    {views  &&  numberConverter?.(views)}
                                 </div>
                             </div>
                             <div className={cls.Geners}>

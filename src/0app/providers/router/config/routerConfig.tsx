@@ -1,13 +1,13 @@
 import {RouteProps} from "react-router-dom"
 import React from "react";
-import {Main, CardManga, MangaContent, MangaTops} from "../../../../1pages";
+import {Main, MangaDescriptionContent, MangaContent, MangaTops} from "../../../../1pages";
 import {Create} from "../../../../1pages/Create";
 import NotFound from "../../../../1pages/NotFound/NotFound";
 import {Catalog} from "../../../../1pages/Catalog";
-import {Push} from "../../../../1pages/Push";
 import {PushCurd} from "../../../../1pages/Push/PushCard";
-import Auth from "../../../../1pages/Auth/ui/Auth";
-import Form from "../../../../3features/componets/Form/Form";
+import Login from "../../../../3features/Login/ui/Login";
+import {Header} from "../../../../2widgets/Header";
+import {UserRoom} from "../../../../1pages/UserRoom";
 
 enum AppRoutes {
     MAIN = "main",
@@ -18,8 +18,7 @@ enum AppRoutes {
     CREATE = "create",
     CATALOG = "catalog",
     PUSH = "push",
-    AUTH = "auth",
-    FORM = "form"
+    USERROOM = "userRoom"
 }
 
 export type AppRouteProps = RouteProps & {}
@@ -32,8 +31,7 @@ export const RoutePaths: Record<AppRoutes, string> = {
     [AppRoutes.CREATE]: "/manga/create",
     [AppRoutes.CATALOG]: "/manga/catalog",
     [AppRoutes.PUSH]: "/manga/push",
-    [AppRoutes.AUTH]: "/manga/auth",
-    [AppRoutes.FORM]: "/manga/form",
+    [AppRoutes.USERROOM]: "/manga/userRoom",
 
 
 
@@ -53,7 +51,7 @@ export const routerConfig: Record<AppRoutes, AppRouteProps> = {
     },
     [AppRoutes.CARDMANGA]: { // Динамический путь с параметром маршрута
         path: RoutePaths.cardmanga,
-        element: <CardManga/>
+        element: <MangaDescriptionContent/>
     },
     [AppRoutes.MANGACONTENT]: { // Динамический путь с параметром маршрута
         path: RoutePaths.mangaContent,
@@ -75,13 +73,9 @@ export const routerConfig: Record<AppRoutes, AppRouteProps> = {
         path: RoutePaths.push,
         element: <PushCurd/>
     },
-    [AppRoutes.AUTH]: { // Динамический путь с параметром маршрута
-        path: RoutePaths.auth,
-        element: <Auth/>
-    },
-    [AppRoutes.FORM]: { // Динамический путь с параметром маршрута
-        path: RoutePaths.form,
-        element: <Form type={"register"}/>
+    [AppRoutes.USERROOM]: { // Динамический путь с параметром маршрута
+        path: RoutePaths.userRoom,
+        element: <UserRoom/>
     }
 };
 

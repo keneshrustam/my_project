@@ -1,22 +1,68 @@
-.input {
+form {
+  width: 60vw;
+  max-width: 60vw;
+}
+form .input {
   border: none;
   background-color: #1b1b1b;
   color: white;
-  width: 50vw;
-  padding: 20px;
+  width: 94%;
   border-radius: 22px;
   outline: none;
   font-weight: 600;
-  font-size: 16px;
 }
-.input::placeholder {
+@media (max-width: 767px) {
+  form .input {
+    padding: calc(12px + 13.6 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  form .input {
+    padding: calc(12px + 8 * 100vw/1280);
+  }
+}
+@media (max-width: 767px) {
+  form .input {
+    font-size: calc(11px + 8.5 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  form .input {
+    font-size: calc(11px + 5 * 100vw/1280);
+  }
+}
+form .input::placeholder {
   font-weight: 700;
   font-size: 17px;
 }
-
-.textValueLength {
+form .inputWar {
+  border: 1px solid red;
+}
+form .textValueLength {
   color: #a9a9a9;
-  font-size: 12px;
+}
+@media (max-width: 767px) {
+  form .textValueLength {
+    font-size: calc(8px + 6.8 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  form .textValueLength {
+    font-size: calc(8px + 4 * 100vw/1280);
+  }
+}
+form .war {
+  color: red;
+}
+@media (max-width: 767px) {
+  form .war {
+    font-size: calc(8px + 6.8 * (100vw - 320px) / 1280);
+  }
+}
+@media (min-width: 767px) {
+  form .war {
+    font-size: calc(8px + 4 * 100vw/1280);
+  }
 }
 
 /*# sourceMappingURL=AddComment.module.css.map */

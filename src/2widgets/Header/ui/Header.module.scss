@@ -1,0 +1,55 @@
+.header {
+  width: 100vw;
+  height: 60px;
+  background-color: #171717;
+
+  .nav {
+    width: 100vw;
+    margin: 0 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .One {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .logo {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+      }
+    }
+
+    .tree {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .login {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        background-color: #1976d2;
+        border-radius: 20px;
+      }
+
+      .userLogo {
+        border-radius: 50%;
+        background-color: transparent;
+        border: none;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        box-shadow: 0 0 7px transparent; /* Начальное значение тени */
+        transition: box-shadow 0.5s ease; /* Добавляем переход для свойства box-shadow */
+
+        &:hover {
+          box-shadow: 0 0 7px #3f5495; /* Изменяем тень на нулевую при наведении указателя мыши */
+        }
+      }
+    }
+  }
+}

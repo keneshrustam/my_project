@@ -19,6 +19,7 @@
 .curd .imgWrapper {
   width: 128px;
   height: 200px;
+  object-fit: cover;
 }
 .curd .boxForDescription {
   max-width: 100%;
@@ -26,10 +27,18 @@
   flex-direction: column-reverse;
   padding: 0 12px 35px 20px;
 }
-.curd .boxForDescription .WrapperForIcons {
-  width: 40px;
+.curd .boxForDescription .lvr {
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  flex-direction: row;
+  margin-top: 5px;
 }
-.curd .boxForDescription .WrapperForIcons .Icons {
+.curd .boxForDescription .lvr .WrapperForIcons {
+  width: 60px;
+}
+.curd .boxForDescription .lvr .WrapperForIcons .Icons {
   font-size: 14px;
 }
 .curd .Name {
@@ -48,15 +57,6 @@
   font-size: 1rem;
   font-weight: 600;
   color: #ababab;
-}
-
-.lvr {
-  max-width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  gap: 5px;
-  flex-direction: row;
-  margin-top: 5px;
 }
 
 /*# sourceMappingURL=MangaBlockCard.module.css.map */

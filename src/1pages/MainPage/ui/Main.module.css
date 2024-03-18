@@ -8,7 +8,7 @@
 .boxScroll {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: scroll;
   gap: 1vh;
   padding-bottom: 10px;
 }

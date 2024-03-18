@@ -1,21 +1,39 @@
-.input {
-  border: none;
-  background-color: #1b1b1b;
-  color: white;
-  width: 50vw;
-  padding: 20px;
-  border-radius: 22px;
-  outline: none;
-  font-weight: 600;
-  font-size: 16px;
+@import "../../../main.module";
 
-  &::placeholder{
-    font-weight: 700;
-    font-size: 17px;
+form {
+  width: 60vw;
+  max-width: 60vw;
+
+  .input {
+    border: none;
+    background-color: #1b1b1b;
+    color: white;
+    width: 94%;
+    @include adaptiv-padding(20, 12);
+    border-radius: 22px;
+    outline: none;
+    font-weight: 600;
+    @include adaptiv-font(16, 11);
+
+
+    &::placeholder {
+      font-weight: 700;
+      font-size: 17px;
+    }
   }
-}
 
-.textValueLength {
-  color: #a9a9a9;
-  font-size: 12px;
+  .inputWar {
+    border: 1px solid red;
+  }
+
+
+  .textValueLength {
+    color: #a9a9a9;
+    @include adaptiv-font(12, 8);
+  }
+
+  .war {
+    color: red;
+    @include adaptiv-font(12, 8);
+  }
 }

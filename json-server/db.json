@@ -1,4 +1,13 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "email": "greenchay16@gmail.com",
+      "password": "12345",
+      "img": "",
+      "favoriteMangas": []
+    }
+  ],
   "mangas": [
     {
       "id": 1,
@@ -28,6 +37,14 @@
         {
           "author": "Author",
           "comment": "knpgrne"
+        },
+        {
+          "author": "Author",
+          "comment": "sdasd"
+        },
+        {
+          "author": "Author",
+          "comment": "sdsds"
         }
       ],
       "genres": [
@@ -88,7 +105,284 @@
       "data": 2013,
       "translator": [],
       "author": "",
-      "comments": [],
+      "comments": [
+        {
+          "author": "Author",
+          "comment": "3000"
+        },
+        {
+          "author": "Author",
+          "comment": "3000"
+        },
+        {
+          "author": "Author",
+          "comment": "3000"
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "Author",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": "envea"
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": "mnr3kn "
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": "mfkernk"
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": ""
+        },
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": "print()"
+        }
+      ],
       "genres": [
         "Экшен",
         "Приключения",
@@ -190,7 +484,12 @@
       "data": 2016,
       "translator": [],
       "author": "",
-      "comments": [],
+      "comments": [
+        {
+          "author": "Author",
+          "comment": "hjgj"
+        }
+      ],
       "genres": [
         "Драма",
         " Элементы юмора",
@@ -502,7 +801,12 @@
       "data": 2011,
       "translator": [],
       "author": "",
-      "comments": [],
+      "comments": [
+        {
+          "author": "Author",
+          "comment": "print()"
+        }
+      ],
       "genres": [
         "Боевик",
         "Боевые искусства",
@@ -726,7 +1030,12 @@
       "data": 2020,
       "translator": [],
       "author": "",
-      "comments": [],
+      "comments": [
+        {
+          "author": "greenchay16@gmail.com",
+          "comment": "print9"
+        }
+      ],
       "genres": [
         "Боевик",
         "Боевые искусства",
@@ -844,7 +1153,16 @@
       "data": 1997,
       "translator": [],
       "author": "",
-      "comments": [],
+      "comments": [
+        {
+          "author": "Author",
+          "comment": "nurdin"
+        },
+        {
+          "author": "Author",
+          "comment": "gey"
+        }
+      ],
       "genres": [
         "Боевик",
         "Боевые искусства",
